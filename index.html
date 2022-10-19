@@ -98,7 +98,7 @@
   </head>
   <body>
     <header>
-      <h1>Mozilla TEST</h1>
+      <h1>Mozilla</h1>
       <!-- insert <img> element, link to the small
           version of the Firefox logo -->
       <img src="updated/firefox_logo-only_RGB_120px.png" alt="firefox logo">
@@ -126,19 +126,36 @@
             alt="firefox logo">
         </a>
         <a href="https://www.mozilla.org/">
-          <img >
+          <img 
+            srcset="updated/mozilla-dinosaur-head_120px.png 120w, 
+                    updated/mozilla-dinosaur-head_400px.png 400w"
+            sizes="(max-width:500px) 120px,
+                    400px"
+            src="updated/mozilla-dinosaur-head_400px.png"
+            alt="mozilla dinosaur head">
         </a>
         <a href="https://addons.mozilla.org/">
-          <img>
+          <img 
+            srcset="updated/firefox-addons_120px.png 120w, 
+                    updated/firefox-addons_400px.png 400w"
+            sizes="(max-width:500px) 120px,
+                    400px"
+            src="updated/firefox-addons_400px.png"
+            alt="firefox addons logo">
         </a>
         <a href="https://developer.mozilla.org/en-US/">
-          <img>
+          <img src="originals/mdn.svg" alt="mdn logo">
         </a>
         <div class="clearfix"></div>
       </div>
 
       <div class="red-panda">
         <!-- insert picture element -->
+        <picture>
+          <source media="(max-width: 600px)" srcset="updated/red-panda_cropped.png" type="image/png">
+          <source media="(min-width: 601px)" srcset="updated/red-panda.jpg" type="image/jpg">
+          <img src="updated/red-panda.jpg" alt="a red panda in a tree">
+        </picture>
       </div>
 
     </main>
